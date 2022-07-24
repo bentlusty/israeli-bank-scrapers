@@ -7,8 +7,8 @@
     "node": ">= 14.14.0",
     "npm": ">= 6.14.8"
   },
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "lib/index",
+  "types": "lib/index",
   "scripts": {
     "clean": "rimraf lib",
     "test": "cross-env BABEL_ENV=test jest",
