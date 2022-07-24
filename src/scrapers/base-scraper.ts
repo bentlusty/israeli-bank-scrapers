@@ -49,10 +49,9 @@ export interface ScraperOptions {
    */
   verbose?: boolean;
 
-  /**
-   * the date to fetch transactions from (can't be before the minimum allowed time difference for the scraper)
-   */
   startDate: Date;
+
+  endDate?: Date;
 
   /**
    * shows the browser while scraping, good for debugging (default false)

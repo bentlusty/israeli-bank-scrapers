@@ -162,10 +162,12 @@ async function fetchAccountData(page: Page, baseUrl: string, options: ScraperOpt
 
   const defaultStartMoment = moment().subtract(1, 'years').add(1, 'day');
   const startDate = options.startDate || defaultStartMoment.toDate();
+  const endDate = options.endDate || moment().toDate();
   const startMoment = moment.max(defaultStartMoment, moment(startDate));
+  const endMoment = moment.min(defaultStartMoment, moment(endDate));
 
   const startDateStr = startMoment.format(DATE_FORMAT);
-  const endDateStr = moment().format(DATE_FORMAT);
+  const endDateStr = endMoment.format(DATE_FORMAT);
 
   const accounts: TransactionsAccount[] = [];
 
